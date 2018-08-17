@@ -1,1 +1,1 @@
-# JS-exercises
+# scissors-rock-enchanced
