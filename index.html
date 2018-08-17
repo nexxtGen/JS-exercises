@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<html lang="pl-PL">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>10-1 Flickity</title>
+        <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendor/flickity.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css"> 
+	</head>
+	<body>  
+        <button id="first-cell" class="btn-start">Restart</button>          
+        <div class="main-carousel">  
+            <div class="carousel-cell" id="carousel-cell1" style="background-image: url('https://image.shutterstock.com/image-photo/floral-summer-spring-background-yellow-260nw-1057057208.jpg')">
+                <div class="container">Slajd 1</div>
+            </div>    
+            <div class="carousel-cell" id="carousel-cell2" style="background-image: url('https://www.nature.org/cs/groups/webcontent/@web/@rhodeisland/documents/media/hpsp-bradford-dam.jpg ')">
+                <div class="container">Slajd 2</div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell3" style="background-image: url('http://4.bp.blogspot.com/-Hk0FUv18K74/TYXqUIWofYI/AAAAAAAAALw/baHQWbYVWFM/s1600/Exercise%2B-%2BHorizontal%2Band%2Bvertical%2Blines%2B%2528E%2529.jpg')">
+                <div class="container">Slajd 3</div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell4" style="background-image: url('http://www.cuscoattractions.com/wp-content/uploads/2018/01/05202016170842-valle-sagrado.jpg ')">
+                <div class="container">Slajd 4</div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell5" style="background-image: url('http://t.wallpaperweb.org/wallpaper/nature/3840x1024/9XMedia1280TripleHorizontalRocksandsky.jpg ')">
+                <div class="container">Slajd 5</div>
+            </div>            
+        </div> 
+        <div class="progress-bar"></div>
+            <p class="cell-links">
+                View:
+                <a href="#carousel-cell1">Cell 1</a>,
+                <a href="#carousel-cell2">Cell 2</a>,
+                <a href="#carousel-cell3">Cell 3</a>,
+                <a href="#carousel-cell4">Cell 4</a>,
+                <a href="#carousel-cell5">Cell 5</a>
+            </p>       
+
+        
+        <script src="vendor/flickity.pkgd.min.js"></script> 
+        <script src="vendor/hash.js"></script>       
+        <script src="js/script.js"></script>
+    </body>    
+</html>
