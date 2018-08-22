@@ -1,1 +1,1 @@
-# JS-exercises
+# 10-1-flickity
