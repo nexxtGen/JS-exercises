@@ -1,0 +1,9 @@
+body { background: #52c0ff; }
+
+.container { margin: 100px auto; display: flex; flex-direction: column; }
+
+.container button { color: white; background-color: #195dca; border: 1px solid black; font-size: 15px; width: 170px; height: 50px; margin: 0 auto; text-align: center; }
+
+.container button:hover { background-color: #499dec; }
+
+.container p { padding: 10px; background-color: rgba(43, 170, 255, 0.6); font-size: 22px; padding: 40px; margin: 15px auto; }
