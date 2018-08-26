@@ -8,14 +8,26 @@ var templateCell = document.getElementById('template-carousel-cell').innerHTML;
 var results = document.getElementById('results');
 Mustache.parse(templateCell);
 
+/*
+function render(a) {
+    return a += Mustache.render(templateCell, a);
+}
+var listCells =  dataCell.reduce(render);
+console.log(listCells);
+*/
+var listCells = dataCell.reduce(function(prev) {
+    return prev += Mustache.render(templateCell, prev);
+  });
+  console.log(listCells);
+  results.insertAdjacentHTML('beforeend', listCells);
+/*
 var listCells = '';
-
 for(var i = 0; i < dataCell.length; i++){
-  console.log(dataCell);  
+  //console.log(dataCell);  
   listCells += Mustache.render(templateCell, dataCell[i]);
 }
 results.insertAdjacentHTML('beforeend', listCells);
-
+*/
 
 
 // Flickity
