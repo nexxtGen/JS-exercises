@@ -9,14 +9,22 @@
 		var headerClickCallback = function(){
 			// Oparliśmy działanie naszego akordeonu o klasę "active" nadawaną na nagłówek. W takim razie wystarczy, że nadamy tę klasę na kliknięty nagłówek:
 			this.classList.add('active');			
-			// A teraz musimy jeszcze usunąć klasę "active" z wszystkich pozostałych nagłówków. Wykorzystamy do tego pętlę, przechodzącą przez wszystkie nagłówki, zapisane przed chwilą w zmiennej headers.
+            // A teraz musimy jeszcze usunąć klasę "active" z wszystkich pozostałych nagłówków. Wykorzystamy do tego pętlę, 
+            //przechodzącą przez wszystkie nagłówki, zapisane przed chwilą w zmiennej headers.
+            headers.forEach(element => {
+                if(element.classList.contains('active') && element != this){					
+					element.classList.remove('active');
+				}
+            });
+            /*
 			for(var i = 0; i < headers.length; i++){
 				// Jeśli dany header ma klasę "active" ORAZ nie jest tym nagłówkiem, który właśnie kliknęliśmy...
 				if(headers[i].classList.contains('active') && headers[i] != this){
 					// ... to usuń klasę active.
 					headers[i].classList.remove('active');
 				}
-			}
+            }
+            */
 		};		
 		// I teraz przypiszemy funkcję headerClickCallback do każdego nagłówka. 		
 		for(var i = 0; i < headers.length; i++){
