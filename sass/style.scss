@@ -2,11 +2,11 @@ body {
     background: rgb(82, 192, 255);
 }
 .container {
+    color: white;
     margin: 100px auto;
     display: flex;
     flex-direction: column;
-    button {
-        color: white;
+    button {        
         background-color: rgb(25, 93, 202);
         border: 1px solid black;
         font-size: 15px;

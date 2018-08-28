@@ -1,8 +1,8 @@
 body { background: #52c0ff; }
 
-.container { margin: 100px auto; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; }
+.container { color: white; margin: 100px auto; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; }
 
-.container button { color: white; background-color: #195dca; border: 1px solid black; font-size: 15px; width: 170px; height: 50px; margin: 0 auto; text-align: center; }
+.container button { background-color: #195dca; border: 1px solid black; font-size: 15px; width: 170px; height: 50px; margin: 0 auto; text-align: center; }
 
 .container button:hover { background-color: #499dec; }
 
