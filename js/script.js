@@ -15,8 +15,8 @@ function render(a) {
 var listCells =  dataCell.reduce(render);
 console.log(listCells);
 */
-var listCells = dataCell.reduce(function(prev) {
-    return prev += Mustache.render(templateCell, prev);
+var listCells = dataCell.reduce(function(prev, next) {
+    return prev += Mustache.render(templateCell, next);
   });
   console.log(listCells);
   results.insertAdjacentHTML('beforeend', listCells);
