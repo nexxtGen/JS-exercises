@@ -1,1 +1,2 @@
-# JS-exercises
+# 13-5 npm, kolory 
+
