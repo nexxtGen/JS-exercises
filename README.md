@@ -1,1 +1,3 @@
 # JS-exercises
+
+EventEmitter module
