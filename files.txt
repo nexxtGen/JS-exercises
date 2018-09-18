@@ -1,0 +1,1 @@
+.git,.gitignore,index.js,node_modules,package-lock.json,package.json,path_1,path_2,README.md,tekst.txt,wolf.jpg
