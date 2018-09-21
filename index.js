@@ -2,7 +2,9 @@
 
 var fs = require('fs');// fs to moduł Node do pracy z plikami.
 var http = require('http');
+var colors = require('colors');
 var server = http.createServer();
+
 
 server.on('request', function (request, response) {
     response.setHeader("Content-Type", "text/html; charset=utf-8");
@@ -19,9 +21,12 @@ server.on('request', function (request, response) {
                     response.write(Buffer.from(data).toString('base64')); //zmienia odczyt pliku na string
                     response.end('"/></body></html>');
             });
-    }
+    }    
 });
 server.listen(9000);
+console.log('Server port: http://localhost:9000/ is aviable.'.green);
+
+
 
 /*
 fs.readFile('./tekst.txt', 'utf-8', function(err, data) {
