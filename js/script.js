@@ -65,43 +65,44 @@ var GameTitle = React.createClass( {
         titleInProps: React.PropTypes.string.isRequired
     },
 
-    // Mogę przekazać teraz do propsa odniesienie do klucza w Array lub później w klasie game jako this.props.valueInProps.titleInArr !!
+    //Jeśli ustaliłem, że przekazuję jako props string to musze go wyciągnąć z obiektu w klasie singleGameAllData a nie teraz!!!!
+    // Czyli this.props.titleInProps.titleInArr  jest niepoprawne!
     render: function() {
-        return React.createElement('h2', {}, this.props.titleInProps.titleInArr); // Tu średnik is ok.
+        return React.createElement('h2', {}, this.props.titleInProps); // Tu średnik is ok.
     }
 });
 
 var GameDescription = React.createClass( {
     propTypes: {
         descInProps: React.PropTypes.string.isRequired
-    },
-    // Mogę przekazać teraz do propsa odniesienie do klucza w Array lub później w klasie game. 
+    },    
+
     render: function() {
-        return React.createElement('h4', {}, this.props.descInProps.descInArr); // Tu średnik is ok.
+        return React.createElement('h4', {}, this.props.descInProps); // Tu średnik is ok.
     }
 });
 var GameImage = React.createClass( {
     propTypes: {
         imageInProps: React.PropTypes.string.isRequired
     },
-    // Mogę przekazać teraz do propsa odniesienie do klucza w Array lub później w klasie game. 
+
     render: function() {
-        return React.createElement('img', {src: this.props.imageInProps.imgInArr}, ); // Tu średnik is ok.
+        return React.createElement('img', {src: this.props.imageInProps}, ); // Tu średnik is ok.
     }
 });
 // Klasa  second level
 var singleGameAllData = React.createClass({
     propTypes: {
-        objectInProps: React.PropTypes.object.isRequired, //objectInProps jest obiektem, ale juz w w klasie GameTitle została przekazana nazwa klucza!
+        objectInProps: React.PropTypes.object.isRequired, 
     },
 
     render: function() {
         return (
             React.createElement('li', {},
                 //Incepcja poprzednich klas o levelu 3
-                React.createElement(GameTitle, { titleInProps: this.props.objectInProps }), // Gdy zakomentuję tworzone el niżej to Tu ; na końcu Nie zadziała!!!!!!! Pamiętaj!!!!!! 
-                React.createElement(GameDescription, {descInProps: this.props.objectInProps}),
-                React.createElement(GameImage, {imageInProps: this.props.objectInProps} )  //z ; nie zadziała.           
+                React.createElement(GameTitle, { titleInProps: this.props.objectInProps.titleInArr }), // Teraz tutaj mogę przekazać stringka z obiektu  (.....titleInArr)
+                React.createElement(GameDescription, {descInProps: this.props.objectInProps.descInArr}),
+                React.createElement(GameImage, {imageInProps: this.props.objectInProps.imgInArr} )  //z ; nie zadziała.           
             ) // Nie dawać ; !!
         );  // Tu z ; zadziała, ale bez też będzie ok! 
     }
