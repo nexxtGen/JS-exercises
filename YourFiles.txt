@@ -1,1 +1,10 @@
-.git,.gitignore,files.txt,index.js,node_modules,package-lock.json,package.json,README.md,tekst.txt,wolf.jpg,YourFiles.txt
+.git
+.gitignore
+index.js
+node_modules
+package-lock.json
+package.json
+README.md
+tekst.txt
+wolf.jpg
+YourFiles.txt

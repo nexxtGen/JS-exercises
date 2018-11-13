@@ -1,5 +1,4 @@
-
-
+var os = require("os");
 var fs = require('fs');// fs to moduł Node do pracy z plikami.
 var StatMode = require('stat-mode');
 var colors = require('colors');
@@ -39,12 +38,19 @@ var path1 = './'
 fs.readdir(path1, function(err, files){ 
     if (err) throw err;   
     console.log('Pliki:', files);
-    fs.writeFile('./YourFiles.txt', files, function(err) {
+
+    //modify files array to make record=newLine in windows system
+    const fileData = files.reduce((a, b) => { 
+        return a + '\r\n' + b;
+    });
+    
+    fs.writeFile('./YourFiles.txt', fileData , function(err) {
         if (err) throw err;
         console.log('Zapisano dane!'.red);
         fs.readFile('./YourFiles.txt', 'utf-8', function(err, data) {
             console.log('Dane po zapisie:'.red)
             console.log(data);
+            console.log('plik po pętli', fileData)
         });
     })
 });
