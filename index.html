@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<html lang="pl-PL">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>10-1 Flickity</title>
+        <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendor/flickity.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css"> 
+	</head>
+	<body>  
+        <button id="first-cell" class="btn-start">Home</button>          
+        <div class="main-carousel" id="results"></div> 
+        <div class="progress-bar"></div>
+        
+        <script id="template-carousel-cell" type="x-tmpl-mustache">
+                <div class="carousel-cell" id="carousel-cell{{id}}" style="background-image: url('{{{image}}}')">
+                    <div class="container">
+                        <h1> {{ title }} </h1>
+                        {{{description}}}
+                    </div>
+                </div>
+        </script>
+        
+        
+        
+        <div>
+            <p class="cell-links">
+                View:
+                <a href="#carousel-cell1">Cell 1</a>,
+                <a href="#carousel-cell2">Cell 2</a>,
+                <a href="#carousel-cell3">Cell 3</a>,
+                <a href="#carousel-cell4">Cell 4</a>,
+                <a href="#carousel-cell5">Cell 5</a>
+            </p> 
+        </div> 
+            <script>
+                var dataCell = [
+                    {   
+                        id: 1,
+                        image: 'https://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2013/04/applecampus-3.png', 
+                        title: 'Apple',
+                        description: '<h6>Revenue: $ 229.234 billion (2017)</h6> <p>California, U.S.</p>'
+                    },
+                    {   
+                        id: 2,
+                        image: 'https://portalkomunalny.pl/wp-content/uploads/2018/02/amazon-the-spheres-seattle.jpg', 
+                        title: 'Amazon',
+                        description: '<h6>Revenue: $ 177.86 billion (2017)</h6><p>Seattle, U.S.</p>'
+                    },
+                    {   
+                        id: 3,
+                        image: 'https://ocs-pl.oktawave.com/v1/AUTH_2887234e-384a-4873-8bc5-405211db13a2/spidersweb/2017/02/android-ceryfikat.jpg', 
+                        title: 'Google',
+                        description: '<h6>Revenue: $ 109.65 billion (2017)</h6><p>California, U.S.</p>'
+                    },
+                    {   
+                        id: 4,
+                        image: 'http://latfusa.com/media/uploads/2015/09/22/microsoft-1.jpg', 
+                        title: 'Microsoft',
+                        description: '<h6>Revenue: $ 110.360 billion (2017)</h6><p> Washington, U.S.</p>'
+                    },
+                    {   
+                        id: 5,
+                        image: 'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/igiKoQNUnW_s/v1/-1x-1.jpg', 
+                        title: 'Alibaba',
+                        description: '<h6>Revenue: $ 39.898 billion (2018)</h6><p>Hangzhou, Zhejiang, China</p>'
+                    }
+                ];
+            </script>  
+
+
+        <script src="vendor/mustache.js"></script>     
+        <script src="vendor/flickity.pkgd.min.js"></script> 
+        <script src="vendor/hash.js"></script>             
+        <script src="js/script.js"></script>
+    </body>    
+</html>
